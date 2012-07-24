@@ -1,0 +1,17 @@
+---
+# This is the TorqueBox configuration file. Refer to the TorqueBox
+# documentation at http://torquebox.org/documentation/current/ 
+# for all configuration options.
+web:
+  context: "/job"
+
+ruby:
+  version: 1.9
+  interactive: true
+
+jobs:
+  job.one:
+    job: SimpleJob
+    cron: '*/10 * * * * ?'
+    description: Simple Job
+    singleton: true
